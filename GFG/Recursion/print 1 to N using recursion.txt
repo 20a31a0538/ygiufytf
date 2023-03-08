@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void fun(int n){
+    if (n==0 || n<0){
+        return ;
+    }
+    else{
+        
+        fun(n-1);
+         cout<<n<<" ";
+    }
+     
+}
+
+time: theta(n) ,auxiliary : Big-O(n) ---> at worst stack takes n+1 calls
+int main()
+{
+    fun(5);
+    return 0;
+}

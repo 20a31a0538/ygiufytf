@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int sum(int n){
+    
+    if(n==0){
+        return n;
+    }
+    else{
+        return n+sum(n-1);
+    }
+}
+
+int main()
+{
+    
+  int  res= sum(5);
+   cout<<res;
+    return 0;
+}
+
+//time: theta(n) ---> calls n-1 times  space: theta(n)-->returns n+1 times

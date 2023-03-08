@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+bool palindrome(string s,int start,int end){
+    
+    if(start>=end)
+    {
+        return true;
+    }
+    
+    return ( (s[start]==s[end]) && palindrome(s,start++,end--) );
+}
+
+int main()
+{
+    
+  string str="abbcbba";
+  int res= palindrome(str,0,6);
+  cout<<res;
+    return 0;
+}
+
+//time: worst --> both conditions checked --> O(n) and Best -->only one condition checked O(1)
+//space--> t(n)=t(n-2)+theta(1)---> n=10 --> it calls first & last-->means first call -->similarly goes on n/2-->thete(n/2)->theta(n)

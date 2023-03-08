@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int sum_of_digits(int n){
+    
+    if(n==0){
+        return 0;
+    }
+    else{
+        return n%10+sum_of_digits(n/10);
+    }
+}
+
+int main()
+{
+    int x=234;
+    int res=sum_of_digits(x);
+    cout<<res;
+    
+  
+    return 0;
+}
+
+//time :theta(n) space:theta(n)
+//for iterative code(using loops)--> time:theta(n)  space:theta(1)
